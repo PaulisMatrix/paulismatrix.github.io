@@ -6,18 +6,16 @@ const config: QuartzConfig = {
     pageTitle: "Distributed Dialogues",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    analytics: null,
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "https://paulismatrix.github.io/",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
+        header: "Open Sans",
         body: "Source Sans Pro",
         code: "IBM Plex Mono",
       },
