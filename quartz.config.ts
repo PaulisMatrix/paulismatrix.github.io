@@ -3,7 +3,7 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Distributed Dialogues",
+    pageTitle: "distributed.dialogues",
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
