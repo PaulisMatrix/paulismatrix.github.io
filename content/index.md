@@ -12,10 +12,16 @@ I'm a software engineer working at [RavenMail](https://ravenmail.io/) on the mos
   * go-concurrency challenge along with problems around semaphores/mutexes, to understand concurrency in golang and in general: [concurrency](https://github.com/PaulisMatrix/go-concurrency-exercises)
   * Few [contributions](https://github.com/PaulisMatrix/go-caskdb/tree/final) to this excellent project [caskdb](https://github.com/avinassh/py-caskdb/commits/master/) of building a kvstore based on the [bitcask](https://riak.com/assets/bitcask-intro.pdf) paper.
 
-👯 I’m looking to collaborate on: Anything related to distributed systems, databases or containerization tools. You can find my fav projects [here](https://github.com/PaulisMatrix?tab=stars).
+👯 My interests lie in distributed systems and databases. 
+You can find my fav projects [here](https://github.com/PaulisMatrix?tab=stars).
+
+Find out more:
+  * [Posts](./posts/) - My exploration of Computer Science topics.
+  * [Notes](./notes/) - Notes and Learnings about my field of interests.
+  * [TILs](./til/) - What new thing I learnt today!
+  * Search by [Tags](https://paulismatrix.github.io/tags/)
 
 👓 Did you read this? [Is my Toddler a Stochastic Parrot?](https://archive.is/hzBe3)
-
 
 You can reach out to me at 1999.yadwade@gmail.com.
 I'm most active on [Twitter](https://x.com/1999Yadwade).
