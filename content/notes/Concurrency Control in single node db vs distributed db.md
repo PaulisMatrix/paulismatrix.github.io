@@ -3,8 +3,8 @@ tags:
   - db
   - transactions
 publish: true
+description: Concurrency control mechanisms used to execute transactions in a single node db vs in multi-node system. 
 ---
-Concurrency control mechanisms used to execute transactions in a single node db vs in multi-node system. 
 
 ## Prerequisites
 
