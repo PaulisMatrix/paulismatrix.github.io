@@ -10,7 +10,7 @@ const config: QuartzConfig = {
     locale: "en-US",
     baseUrl: "https://paulismatrix.github.io/",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "modified",
+    defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,

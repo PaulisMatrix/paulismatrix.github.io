@@ -62,4 +62,13 @@ Different join algorithms(**Joining outer-left table with inner-right table**) :
 
 ## Relevant Readings
 
-* 
+Sorting and Aggregations Algorithms : 
+* [Youtube](https://www.youtube.com/watch?v=DOu7SVUbuuM)
+* [Slides](https://15445.courses.cs.cmu.edu/fall2023/slides/10-sorting.pdf)
+* [Notes](https://15445.courses.cs.cmu.edu/fall2023/notes/10-sorting.pdf)
+
+Joins Algorithms : 
+* [Youtube](https://www.youtube.com/watch?v=RFaOmqxJf_M)
+* [Slides](https://15445.courses.cs.cmu.edu/fall2023/slides/11-joins.pdf)
+* [Notes](https://15445.courses.cs.cmu.edu/fall2023/notes/11-joins.pdf)
+
