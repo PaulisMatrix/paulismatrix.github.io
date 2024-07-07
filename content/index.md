@@ -3,23 +3,23 @@ title: rushikesh
 description: my personal blog about distributed systems, databases and random ramblings.
 publish: true
 ---
+🐸 I'm a software engineer working at [RavenMail](https://ravenmail.io/) on the most advanced email security suite.<br>
+My interests lie in distributed systems and databases. 
 
-I'm a software engineer working at [RavenMail](https://ravenmail.io/) on the most advanced email security suite.
-
-🔭 I’m currently hacking on following stuff: 
-  * My golang learnings and exploration: [gosushi](https://github.com/PaulisMatrix/gosushi)
-  * Same but around cloud native world: [docker-dump](https://github.com/PaulisMatrix/docker-dump)
-  * go-concurrency challenge along with problems around semaphores/mutexes, to understand concurrency in golang and in general: [concurrency](https://github.com/PaulisMatrix/go-concurrency-exercises)
-  * Few [contributions](https://github.com/PaulisMatrix/go-caskdb/tree/final) to this excellent project [caskdb](https://github.com/avinassh/py-caskdb/commits/master/) of building a kvstore based on the [bitcask](https://riak.com/assets/bitcask-intro.pdf) paper.
-
-👯 My interests lie in distributed systems and databases. 
-You can find my fav projects [here](https://github.com/PaulisMatrix?tab=stars).
-
-Jump to:
+🔎 Jump to:
   * [Posts](./posts/) - Exploring different CS topics.
   * [Notes](./notes/) - Notes and Learnings about my field of interests.
-  * [TILs](./til/) - What new thing I learnt today!
+  * [Shorts](./shorts/) - Short notes, TLDRs, TILs, etc.
   * Search by [Tags](https://paulismatrix.github.io/tags/)
+
+🔭 My Projects: 
+  * [hermes-kv](https://github.com/PaulisMatrix/hermes-kv) - A simple KV store in go with FIFO eviction policy.
+  * [textscout](https://github.com/PaulisMatrix/textscout) - Fuzzy searching over a dataset using postgres and an in-memory inverted index.
+  * [gosushi](https://github.com/PaulisMatrix/gosushi) - My golang knowledge base. 
+  * [go-concurrency](https://github.com/PaulisMatrix/go-concurrency-exercises) - Go concurrency challenges and more..
+
+⚛︎ OSS:
+  * [Contributing](https://github.com/PaulisMatrix/go-caskdb/tree/final) to this excellent project [caskdb](https://github.com/avinassh/py-caskdb/commits/master/) of building a kvstore based on the [bitcask](https://riak.com/assets/bitcask-intro.pdf) paper.
 
 👓 Did you read this? [Is my Toddler a Stochastic Parrot?](https://archive.is/hzBe3)
 
