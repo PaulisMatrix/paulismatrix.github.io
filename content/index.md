@@ -15,8 +15,8 @@ I'm a software engineer working at [RavenMail](https://ravenmail.io/) on the mos
 👯 My interests lie in distributed systems and databases. 
 You can find my fav projects [here](https://github.com/PaulisMatrix?tab=stars).
 
-Find out more:
-  * [Posts](./posts/) - My exploration of Computer Science topics.
+Jump to:
+  * [Posts](./posts/) - Exploring different CS topics.
   * [Notes](./notes/) - Notes and Learnings about my field of interests.
   * [TILs](./til/) - What new thing I learnt today!
   * Search by [Tags](https://paulismatrix.github.io/tags/)

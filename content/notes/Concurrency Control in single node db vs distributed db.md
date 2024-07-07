@@ -15,6 +15,7 @@ description: Concurrency control mechanisms used to execute transactions in a si
 2. **Consistency** in ACID ≠ **Consistency** in CAP. Don’t get confused by the acronyms. C in CAP actually stands for **Linearizability** (GLOBAL ordering of the transactions wherein the transactions are now being executed on multiple nodes at the same time).
 
 3. Whenever you’re dealing with transactions and concurrency control, always remember this cycle: 
+
     * `read-modify-write` policy wherein **most often transactions are first reading a value, modifying the value and writing the value back**. 
 
     * This is the most common scenario you get to see weird results if multiple transactions are executing and we don’t have proper isolations.
@@ -22,12 +23,14 @@ description: Concurrency control mechanisms used to execute transactions in a si
 4. I have always thought of **Isolation ~ Consistency.** How do you achieve consistency between your transactions? By making sure they are isolated from each other, even if they are operating on same record, final record value must be consistent. 
 
 5. Which anomalies we are trying to avoid so that our db records are consistent?
+
     * **Read anomalies** :
         * **Dirty reads** : Transaction reading uncommitted data. 
 
         * **Non-Repeatable reads**: Transaction T1 reading data twice and getting different results each time before committing cause some other transaction T2 modified the data after T1 first read and T2 committed.
 
         * **Phantom reads**: Non-repeatable reads but just for range queries wherein you receive different set of results on querying the same set of rows.
+
     * **Write Anomalies** :
         * **Dirty write** : Update/write a value based on a dirty read(value read is not yet committed).
 
@@ -47,8 +50,9 @@ ex: postgres, mysql, sqloracle, etc
 	![Isolation Levels](../images/isolation_levels.png)
 
 	- Detailed hierarchy [here](https://jepsen.io/consistency)
+
 2. So basically Isolation levels. **Lowest to Highest**.
-	
+
 	* **Read Uncommitted** : All of them may happen.
 
 	* **Read Committed** : Phantoms and unrepeatable reads may happen.
@@ -65,19 +69,23 @@ ex: postgres, mysql, sqloracle, etc
 ### Transactions
 
 1. With the help of **Concurrency Control** mechanisms.
+
     * These all strive to enforce **Serialisability** which guarantees an ordering of the transactions. Once ordering is enforced, you don’t have to worry about any inconsistent updates.
-		* **[Serialisability](https://jepsen.io/consistency/models/sequential)**
-			* Serialisability enforces local ordering i.e the order is consistent from individual records or a client’s pov
 
-			* Operations can be ordered in different ways(depending on the arrival order, or even arbitrarily in case of two writes arrive simultaneously), but all processes observe operations in the same order.
+    * **[Serialisability](https://jepsen.io/consistency/models/sequential)**
+        * Serialisability enforces local ordering i.e the order is consistent from individual records or a client’s pov
 
-			* https://www.cockroachlabs.com/blog/acid-rain/
+        * Operations can be ordered in different ways(depending on the arrival order, or even arbitrarily in case of two writes arrive simultaneously), but all processes observe operations in the same order.
+
+        * https://www.cockroachlabs.com/blog/acid-rain/
 
 2. **Optimistic**: Operates in three phases:
+
     * **Read Phase, Validation Phase, Writes Phase.** 
 		* Before committing the value(write phase), validations are performed to guarantee that no any transaction violate isolation guarantees and if they do, they are rolled back. (This feels a lot like a CAS operation)
 
 3. **Pessimistic**:
+
     * **Two phase locking**. 
 		* Default in most of the databases. 
 		* Explicitly take a lock when you are about to write. Readers don’t block writers and vice versa. Multiple readers share the same lock. Check Reader-Writer lock. Ex: Locking in [sqlite](https://www.sqlite.org/lockingv3.html#locking).
@@ -164,26 +172,27 @@ ex: cockroachdb, spanner, yugabyte, mongo, etc.
 
     * Different consensus algorithms follow more or less the same structure, leader propagates the updates to the followers and commits on ack. Involves two steps, **Prepare** and **Commit.**
 
-	    * **Zookeeper atomic broadcast.** https://zookeeper.apache.org/doc/r3.4.13/zookeeperInternals.html
+    * **Zookeeper atomic broadcast.** : https://zookeeper.apache.org/doc/r3.4.13/zookeeperInternals.html
 
-	    * **Paxos and its variants.**
-		    * Setup:
-                * **Proposers:** Receive values from clients, create proposals to accept these values and attempt to collect votes(yes or no) from acceptors.
-                * **Acceptors:** Vote to accept or reject values proposed by the proposers. Can have multiple acceptors but quorum of them is required to accept the proposal.
-                * **Learners:** Take role of replicas, storing the outcomes of accepted proposals.
-		    * Takes place in two steps: **voting/propose** phase and **replication/commit** phase.
-            * For committing, only a **quorum(n/2+1)** of followers is required as compared to **ALL** in 2PC which makes paxos more **available than** 2PC/3PC protocols.
+    * **Paxos and its variants.**
+        * Setup:
+            * **Proposers** : Receive values from clients, create proposals to accept these values and attempt to collect votes(yes or no) from acceptors.
+            * **Acceptors** : Vote to accept or reject values proposed by the proposers. Can have multiple acceptors but quorum of them is required to accept the proposal.
+            * **Learners** : Take role of replicas, storing the outcomes of accepted proposals.
+        * Takes place in two steps: **voting/propose** phase and **replication/commit** phase.
+        * For committing, only a **quorum(n/2+1)** of followers is required as compared to **ALL** in 2PC which makes paxos more **available than** 2PC/3PC protocols.
 
-	    * **Raft.**
-		    * Setup:
-			    * **Candidate:** Node has to transition to the candidate state to be elected as the leader.
-			    * **Leader:** Temporary(upto its term) cluster leader handling client reqs and replicating the same to the followers.
-			    * **Follower:** Passive participant persisting log records of the received reqs.
-		    * **Partial ORDERING of the operations** are guaranteed by a monotonically increasing **epoch/term ID** issued by the leader. Each record can be **uniquely** identified by this term ID and the corresponding index of that record.
+    * **Raft.**
+        * Setup :
+            * **Candidate** : Node has to transition to the candidate state to be elected as the leader.
+            * **Leader** : Temporary(upto its term) cluster leader handling client reqs and replicating the same to the followers.
+            * **Follower** : Passive participant persisting log records of the received reqs.
+        * **Partial ORDERING of the operations** are guaranteed by a monotonically increasing **epoch/term ID** issued by the leader. Each record can be **uniquely** identified by this term ID and the corresponding index of that record.
 
-        * **Accord:** Protcol used in Cassandra : https://li-boxuan.medium.com/distributed-transaction-in-database-from-epaxos-to-accord-6de7999ad08e
+    * **Accord.** : Protcol used in [Cassandra](https://li-boxuan.medium.com/distributed-transaction-in-database-from-epaxos-to-accord-6de7999ad08e)
                 
 3. Databases use a consensus algos to execute these transactions to ensure ordering is maintained and the data written is consistent even in the presence of leader failures, network failures, etc.
-    - Ex: **Spanner** does **2PC+2PL** over paxos groups. i.e each shard/node is a paxos leader and its replicas act as followers. Transactions use 2PC to co-ordinate between these leaders of different nodes and consensus to handle leader failures, replication, etc.
+    * Ex: **Spanner** does **2PC+2PL** over paxos groups. i.e each shard/node is a paxos leader and its replicas act as followers. 
+    * Transactions use 2PC to co-ordinate between these leaders of different nodes and consensus to handle leader failures, replication, etc.
 
 This a lot to process and may not seem coherent. But I have jotted down some points I have understood till now.
