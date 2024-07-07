@@ -15,7 +15,7 @@ const defaultOptions: Options = {
   maxDepth: 3,
   minEntries: 1,
   showByDefault: true,
-  collapseByDefault: false,
+  collapseByDefault: true,
 }
 
 interface TocEntry {

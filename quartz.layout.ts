@@ -21,6 +21,8 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Breadcrumbs(),
     Component.ArticleTitle(),
     Component.ContentMeta(),
+    Component.TagList(),
+    Component.ContentFrontmatter(),
     Component.TableOfContents(),
   ],
   left: [
