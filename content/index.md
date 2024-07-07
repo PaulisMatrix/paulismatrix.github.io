@@ -10,10 +10,11 @@ My interests lie in distributed systems and databases.
   * [Posts](./posts/) - Exploring different CS topics.
   * [Notes](./notes/) - Notes and Learnings about my field of interests.
   * [Shorts](./shorts/) - Short notes, TLDRs, TILs, etc.
+  * [PIL](./papers/) - Papers I love, read and reviewed.
   * Search by [Tags](https://paulismatrix.github.io/tags/)
 
 🔭 My Projects: 
-  * [hermes-kv](https://github.com/PaulisMatrix/hermes-kv) - A simple KV store in go with FIFO eviction policy.
+  * [hermes-kv](https://github.com/PaulisMatrix/hermes-kv) - A simple KV store in go with FIFO eviction policy and a barebones transactions API.
   * [textscout](https://github.com/PaulisMatrix/textscout) - Fuzzy searching over a dataset using postgres and an in-memory inverted index.
   * [gosushi](https://github.com/PaulisMatrix/gosushi) - My golang knowledge base. 
   * [go-concurrency](https://github.com/PaulisMatrix/go-concurrency-exercises) - Go concurrency challenges and more..
