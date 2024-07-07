@@ -33,6 +33,9 @@ export function isSimpleSlug(s: string): s is SimpleSlug {
   const validEnding = !endsWith(s, "index")
   return validStart && !containsForbiddenCharacters(s) && validEnding && !_hasFileExtension(s)
 }
+export function createSimpleSlug(value: string): SimpleSlug {
+  return value as SimpleSlug;
+}
 
 /** Can be found on `href`s but can also be constructed for client-side navigation (e.g. search and graph) */
 export type RelativeURL = SlugLike<"relative">

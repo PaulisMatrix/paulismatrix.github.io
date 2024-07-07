@@ -3,8 +3,9 @@ tags:
   - db
   - transactions
 publish: true
-description: Concurrency control mechanisms used to execute transactions in a single node db vs in multi-node system. 
+description: A brief overview of transactions control mechanisms in a single node database as compared to those spanning across more than one nodes in a distributed setup.
 ---
+A brief overview of transactions control mechanisms in a single node database as compared to those spanning across more than one nodes in a distributed setup.
 
 ## Prerequisites
 
@@ -98,7 +99,7 @@ ex: postgres, mysql, sqloracle, etc
 3. **MVCC** : https://www.postgresql.org/docs/current/mvcc.html
 
 
-## Transactions in a distributed setup of db nodes
+## Transactions in a distributed database setup
 ex: cockroachdb, spanner, yugabyte, mongo, etc.
 
 ### Consistency levels
