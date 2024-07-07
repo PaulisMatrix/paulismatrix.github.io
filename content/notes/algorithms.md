@@ -2,6 +2,7 @@
 tags:
   - dsa
 publish: true
+date: 2024-07-06
 description: Notable algorithms used to solve variety of problems in computer science.
 ---
 

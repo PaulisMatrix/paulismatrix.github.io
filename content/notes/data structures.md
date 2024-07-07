@@ -1,6 +1,7 @@
 ---
 tags:
   - dsa
+date: 2024-07-06
 publish: true
 description: Notable data structures used to solve variety of problems in computer science.
 ---
