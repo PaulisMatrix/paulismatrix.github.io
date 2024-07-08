@@ -32,7 +32,9 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
   ],
-  right: [],
+  right: [
+    Component.Breadcrumbs(),
+  ],
   /*
   right: [
     Component.RecentNotes({
