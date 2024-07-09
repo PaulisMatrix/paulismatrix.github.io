@@ -37,6 +37,7 @@ So basically the `<-ctx.Done()` will be called on two conditions :
 * when context is explicitly cancelled.
 
 Below is a simple demonstration of context cancellation.
+
 Live demo [here](https://go.dev/play/p/_HCyxyO2O3l)
 
 ```go title="cancel_context.go"
@@ -98,7 +99,7 @@ if ctx.Err() == context.Canceled {
 }
 ```
 
-* Appendix:
+* Appendix :
 * [More](https://stackoverflow.com/a/52799874) on context cancellations.
 * Context handling in case of [db operations](https://go.dev/doc/database/cancel-operations)
 * 
