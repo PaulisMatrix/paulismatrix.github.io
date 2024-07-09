@@ -13,6 +13,7 @@ export default ((opts?: Options) => {
         <hr />
         <ul style={{ display: "flex" }}>
           {Object.entries(links).map(([text, link]) => (
+            //<li style={{ flex: "1 0 auto" }}>
             <li>
               <a href={link}>{text}</a>
             </li>

@@ -12,4 +12,15 @@ footer {
     gap: 1rem;
     margin-top: -1rem;
   }
+
+  /* Mobile styles */
+  @media (max-width: 767px) {
+    & li {
+      font-size: 0.9rem;
+
+      & a {
+        font-size: 0.9rem;
+      }
+    }
+  }
 }

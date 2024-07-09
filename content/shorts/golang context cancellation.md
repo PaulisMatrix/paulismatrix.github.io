@@ -6,9 +6,11 @@ date: 2024-07-06
 description: a short example of context cancellation in golang.
 ---
 
-Passing context from parent function(caller) to the child function/s(calle) is a pretty common pattern in golang to control the lifetime of the call. 
+Passing context from parent function(caller) to the child function/s(calle) is a pretty<br> 
+common pattern in golang to control the lifetime of the call. 
 
-We can cancel a context through `cancel()` function if we no longer want to wait for the result<br> if the client is taking too much time to respond. Basically to dictate timeouts/deadlines.
+We can cancel a context through `cancel()` function if we no longer want to wait for<br> the result if the client is taking too much time to respond.<br> 
+Basically to dictate timeouts/deadlines.
 
 Golang automatically returns a channel that's closed when the corresponding work is done.<br>
 Work done here being if and when the context is `Cancelled` or on a `Timeout` or on a `Deadline`.<br>
