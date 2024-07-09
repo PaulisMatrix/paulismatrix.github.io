@@ -3,7 +3,7 @@ tags:
   - go
 publish: true
 date: 2024-07-06
-description: a short example of context cancellation in golang.
+description: context cancellation explained in golang.
 ---
 
 Passing context from parent function(caller) to the child function/s(calle) is a pretty<br> 
@@ -33,13 +33,13 @@ Done is provided for use in select statements.
 ```
 
 So basically the `<-ctx.Done()` will be called on two conditions :
-* when context timeout exceeds.
+* when context timeout/deadline exceeds.
 * when context is explicitly cancelled.
 
 Below is a simple demonstration of context cancellation.
 Live demo [here](https://go.dev/play/p/_HCyxyO2O3l)
 
-```go
+```go title="cancel_context.go"
 func calle(ctx context.Context, wg *sync.WaitGroup) {
 	done := make(chan bool)
 	defer wg.Done()
@@ -99,6 +99,6 @@ if ctx.Err() == context.Canceled {
 ```
 
 * Appendix:
-	* [More](https://stackoverflow.com/a/52799874) on context cancellations.
-	* Context handling in case of [db operations](https://go.dev/doc/database/cancel-operations)
-	* 
+* [More](https://stackoverflow.com/a/52799874) on context cancellations.
+* Context handling in case of [db operations](https://go.dev/doc/database/cancel-operations)
+* 
