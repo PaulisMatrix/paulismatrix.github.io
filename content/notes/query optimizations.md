@@ -78,7 +78,7 @@ When the SQL query is referring to multiple tables/joins.
 * <img src="../images/top_down_optimizer.png" width=70% height=70%>
 
 
-## Relevant Readings 
+## Appendix
 
 * Query Planning and Optimization
     * [Youtube](https://www.youtube.com/watch?v=ePGPVJCyCAk)

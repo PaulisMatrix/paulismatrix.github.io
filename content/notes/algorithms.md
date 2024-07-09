@@ -145,7 +145,7 @@ My notes on different algorithms used to solve variety of problems in computer s
 * [Maze](https://www.astrolog.org/labyrnth/algrithm.htm) following algorithms.
 * Problem on [Fermat’s two square theorem.](https://leetcode.com/problems/sum-of-square-numbers/solutions/5324381/number-theory-with-fermat-legendre-etc-0ms-beats-100) 
 
-## Miscellaneous
+## Appendix
 
 * 6.006 MIT - Intro to algorithms
     * [Youtube playlist](https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY)

@@ -174,7 +174,7 @@ Two approaches to I/O parallelism are multi-disk parallelism and database partit
     * The idea of logical partitioning is to split single logical table into disjoint physical segments that are stored/managed separately. 
     * Such partitioning is ideally transparent to the application. That is, the application should be able to access logical tables without caring how things are stored.
 
-## Relevant Readings
+## Appendix
 
 * Query Execution Part-I
     * [Youtube](https://www.youtube.com/watch?v=3F3FWgujN9Q)

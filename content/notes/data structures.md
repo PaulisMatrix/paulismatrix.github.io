@@ -45,7 +45,7 @@ No self loops, all edges are distinct.
 
 * Drawing [presentable trees](https://llimllib.github.io/pymag-trees/)
 
-## Miscellaneous
+## Appendix
 
 * Data Structures [Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 * [Challenging](https://austinhenley.com/blog/challengingalgorithms.html) data structures and algorithms.

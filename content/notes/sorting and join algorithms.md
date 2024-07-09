@@ -60,7 +60,7 @@ Different join algorithms(**Joining outer-left table with inner-right table**) :
         2. **Probe Phase** - Compare tuples in corresponding partitions for each table.
     * Simple, GRACE(Externally Partitioned), Hybrid.
 
-## Relevant Readings
+## Appendix
 
 Sorting and Aggregations Algorithms : 
 * [Youtube](https://www.youtube.com/watch?v=DOu7SVUbuuM)
