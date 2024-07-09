@@ -7,24 +7,9 @@ date: 2024-07-09
 description: Query optimizations techniques in database systems.
 ---
 
-## Query Plan architecture
-
-<img src="../images/query_architecture.png" width=70% height=70%>
-
-Logical vs Physical Plans:
-
-* **Logical** : The optimizer generates a mapping of a logical algebra expression to the optimal equivalent physical algebra
-expression. The logical plan is roughly equivalent to the relational algebra expressions in the query.
-* **Physical** : Physical operators define a specific execution strategy using an access path for the different operators in
-the query plan. Physical plans may depend on the physical format of the data that is processed (i.e. sorting,
-compression).
-* There does not always exist a one-to-one mapping from logical to physical plans.
-* <img src="../images/physical_plan.png" width=70% height=70%>
-
-
 ## Query Optimizer
 
-Query optimizer is a database component that optimizes the execution of the query plans according to heuristic or cost based rules
+Query optimizer is a database component that optimizes the execution of the query plans according to heuristic or cost based rules.
 * <img src="../images/query_optimization.png" width=70% height=70%>
 
 There are two high-level strategies for query optimization.
@@ -39,6 +24,20 @@ There are two high-level strategies for query optimization.
 * <img src="../images/subquery_rewrite.png" width=70% height=70%>
 
 * **Cost based rules** : As opposed to rules based, what better you can do is determine the cost of each plan depending on various factors like data distribution of your records, cardinality, etc to find out the <br>best optimal plan on the fly.
+
+## Query Plan architecture
+
+<img src="../images/query_architecture.png" width=70% height=70%>
+
+Logical vs Physical Plans:
+
+* **Logical** : The optimizer generates a mapping of a logical algebra expression to the optimal equivalent physical algebra
+expression. The logical plan is roughly equivalent to the relational algebra expressions in the query.
+* **Physical** : Physical operators define a specific execution strategy using an access path for the different operators in
+the query plan. Physical plans may depend on the physical format of the data that is processed (i.e. sorting,
+compression).
+* There does not always exist a one-to-one mapping from logical to physical plans.
+* <img src="../images/physical_plan.png" width=70% height=70%>
 
 ## Cost Estimations
 
