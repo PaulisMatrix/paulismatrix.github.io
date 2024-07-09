@@ -3,7 +3,7 @@ tags:
   - cmu
   - db
 publish: true
-date: 2024-07-08
+date: 2024-07-09
 description: Query optimizations techniques in database systems.
 ---
 

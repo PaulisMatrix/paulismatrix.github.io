@@ -26,14 +26,14 @@ How hashing(counterpart of sorting) is used in computing aggregation queries lik
 
 How are joins performed?
 * All queries can be seen in the form a tree wherein the output of the root node is final result. 
-    <img src="../images/query_plan.png" width=70% height=50%>
+    <img src="../images/query_plan.png" width=70% height=70%>
       
 * How do we reason about reconciling(collecting different tuples from other tables into a final result) records from different tables in case of joins. There are two ways to:
     * **Early Materialisation** : Wherein we actually copy the tuples/records/rows from the tables into a new output tuple. Subsequent operators don’t have to go back and do another IO cause you already have all the records needed for further processing. 
-    <img src="../images/early_materialization.png" width=50% height=50%>
+    <img src="../images/early_materialization.png" width=70% height=70%>
         
     * **Late Materialisation**: Don’t store actual records(since you might not want the extra columns which would be fetched when an entire row is fetched in memory in case of early materialisation), but rather just store some identifier like RecordIDs of the matching tuples so that we can lookup to them later to produce the final result. (Ideal for column stores)
-    <img src="../images/late_materialization.png" width=50% height=50%>    
+    <img src="../images/late_materialization.png" width=70% height=70%>
     
 ### Join Algorithms
 
@@ -52,7 +52,7 @@ Different join algorithms(**Joining outer-left table with inner-right table**) :
     * **Phase1-Build** = Scan the outer relation to build a hash table using the hash function h1 on the join attributions.
     * **Phase2-Probe** = Scan the inner relation and use h1 on each tuple to find out the matching tuple from outer relation since same keys would hash to the same location.
     * Key: Attribute involved in the join, Value: The record tuples. Whether you store actual records(early materialization) or just references/offsets to the records(later materialization)
-    <img src="../images/hash_join.png" width=50% height=50%>    
+    <img src="../images/hash_join.png" width=70% height=70%>    
         
     * One optimisation we can do is use bloom filters to find out whether Sid belongs to the hash table to avoid extra lookups. We built the bloom filter while building the hash table on Rids. 
     * What if these hash tables don’t fit into memory:
