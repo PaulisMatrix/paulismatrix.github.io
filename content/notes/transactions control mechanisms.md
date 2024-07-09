@@ -89,9 +89,9 @@ ex: postgres, mysql, sqloracle, etc
 * **Timestamp ordering:** 
     * Slap each transaction with a timestamp and check for **happens before** relationship to find out which transaction started before/after which. 
         
-    * https://15445.courses.cs.cmu.edu/fall2023/notes/17-timestampordering.pdf
+    * [Timestamp Ordering](https://15445.courses.cs.cmu.edu/fall2023/notes/17-timestampordering.pdf)
 
-**MVCC** : https://www.postgresql.org/docs/current/mvcc.html
+**MVCC** : [MVCC in postgres](https://www.postgresql.org/docs/current/mvcc.html)
 
 
 ## Transactions in a distributed database setup
@@ -112,7 +112,7 @@ So basically Isolation levels. **Highest to Lowest**.
 
 * **Casual Consistency**
     * All processes which are casually related are processed in order. Even if they arrive out of order, the server buffers them and reorders them based on the **vector** clocks and executes them in the order. ${M1(0,t1), M_2(M1,t2), M_3(M2, t3)}$
-    * https://mariadb.org/causal-consistency/
+    * Casual Consistency in [MariaDB](https://mariadb.org/causal-consistency/)
 
 
 * **Session Models**
@@ -136,7 +136,7 @@ Lets see few distributed transactions, consensus algorithms which provide **line
     * Two entities :
         - **Leader** : Holds the state, collects the votes, and is primary point of reference for agreement rounds.
         - **Cohort** : Rest of the node partitions operating over disjoint datasets against which the transactions are performed. Both keep an operation log of every transaction executed
-    * Ex: https://cwiki.apache.org/confluence/display/KAFKA/KIP-939%3A+Support+Participation+in+2PC
+    * Ex: 2PC KIP Support in [kafka](https://cwiki.apache.org/confluence/display/KAFKA/KIP-939%3A+Support+Participation+in+2PC)
 
 * **Three-Phase Commit** 
     * Two phase commit but mitigates the co-ordinator failure. 
@@ -144,28 +144,26 @@ Lets see few distributed transactions, consensus algorithms which provide **line
 
 * **Calvin** 
     * Deterministic execution of the transactions. Ex: faunadb, their transactional model takes inspiration from Calvin.
-    * https://blog.acolyer.org/2019/03/29/calvin-fast-distributed-transactions-for-partitioned-database-systems/<br>
-    * https://www.mydistributed.systems/2020/08/calvin.html
+    * [Calvin Paper](https://blog.acolyer.org/2019/03/29/calvin-fast-distributed-transactions-for-partitioned-database-systems/) explained.
+    * Calvin [summarised](https://www.mydistributed.systems/2020/08/calvin.html)
 
-* **Spanner** style transaction:
-    * https://www.mydistributed.systems/2020/08/google-spanner.html
-
+* [**Spanner**](https://www.mydistributed.systems/2020/08/google-spanner.html) style transaction.
 
 * **Percolator** style transaction: Transactional API on top of Big Table
-    * https://stephenholiday.com/notes/percolator/
-    * TiKV takes inspiration from this: https://tikv.org/deep-dive/distributed-transaction/percolator/
+    * [Percolator](https://stephenholiday.com/notes/percolator/)
+    * Percolator inspired [transactions](https://tikv.org/deep-dive/distributed-transaction/percolator/) in TiKV.
 
 
 * **RAMP**
     * It focuses on how we can avoid co-ordination between the different nodes so that we can execute transactions faster and consistent.
-    * https://blog.acolyer.org/2015/03/19/coordination-avoidance-in-database-systems/
-    * http://www.bailis.org/blog/scalable-atomic-visibility-with-ramp-transactions/
+    * [RAMP Paper](https://blog.acolyer.org/2015/03/19/coordination-avoidance-in-database-systems/) explained.
+    * [Atomic Visibility](http://www.bailis.org/blog/scalable-atomic-visibility-with-ramp-transactions/) with RAMP.
 	
 
 **Consensus** algorithms are used for not only **replicating the state** but also for **establishing ordering** between those transactions and **co-ordination** between your nodes.
 * Different consensus algorithms follow more or less the same structure, leader propagates the updates to the followers and commits on ack. Involves two steps, **Prepare** and **Commit.**
 
-* **Zookeeper atomic broadcast.** : https://zookeeper.apache.org/doc/r3.4.13/zookeeperInternals.html
+* [**Zookeeper atomic broadcast**](https://zookeeper.apache.org/doc/r3.4.13/zookeeperInternals.html)
 
 * **Paxos and its variants.**
     * Setup:
