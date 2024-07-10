@@ -8,7 +8,7 @@ publish: true
 My interests lie in distributed systems and databases. 
 
 🔎 Jump to:
-  * [Posts](./posts/) - Exploring different CS topics.
+  * [Posts](./posts/) - Collection of all my tech, non-tech writings.
   * [Notes](./notes/) - Notes and Learnings about my field of interests.
   * [Shorts](./shorts/) - Short notes, TLDRs, TILs, etc.
   * [PIL](./papers/) - Papers I love, read and reviewed.
@@ -21,9 +21,9 @@ My interests lie in distributed systems and databases.
   * [go-concurrency](https://github.com/PaulisMatrix/go-concurrency-exercises) - Go concurrency challenges and more..
 
 ⚛︎ OSS:
-  * [Contributing](https://github.com/PaulisMatrix/go-caskdb/tree/final) to this excellent project [caskdb](https://github.com/avinassh/py-caskdb/commits/master/) of building a kvstore based on the [bitcask](https://riak.com/assets/bitcask-intro.pdf) paper.
+  * [Contributing](https://github.com/PaulisMatrix/go-caskdb/tree/final) to this excellent project [caskdb](https://github.com/avinassh/py-caskdb/commits/master/) of building a<br> kvstore based on the [bitcask](https://riak.com/assets/bitcask-intro.pdf) paper.
 
 👓 Did you read this? [Is my Toddler a Stochastic Parrot?](https://archive.is/hzBe3)
 
-You can reach out to me at 1999.yadwade@gmail.com.
+Find me at 1999.yadwade@gmail.com<br>
 I'm most active on [Twitter](https://x.com/1999Yadwade).

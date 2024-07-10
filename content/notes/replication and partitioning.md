@@ -122,7 +122,9 @@ How can we tackle replication lag?
 **Partitioning by Consistent hashing** : 
 * In case of hash based partitioning, we need to update the hash function everytime there is addition or node failures which is not ideal. This also leads to lot of data movement to the new node.
 * Consistent hashing prevents minimizes this data movement by maintainig a chain ring of all available nodes and assigning the keys based on its nearest available node.
-* More [here](https://distributed-computing-musings.com/2022/01/partitioning-consistent-hashing/)
+* More on consistent hashing : 
+  * [Consistent Hashing algorithm](https://highscalability.com/consistent-hashing-algorithm/)
+  * [Partitioning Consistent Hashing](https://distributed-computing-musings.com/2022/01/partitioning-consistent-hashing/)
 
 ### Partitioning secondary indexes
 
