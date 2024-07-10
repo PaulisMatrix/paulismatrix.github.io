@@ -23,7 +23,7 @@ There are two high-level strategies for query optimization.
 * Nested sub-queries rewrite. Basically flatting the sub-query to remove the additional level of nesting.
 * <img src="../images/subquery_rewrite.png" width=70% height=70%>
 
-* **Cost based rules** : As opposed to rules based, what better you can do is determine the cost of each plan depending on various factors like data distribution of your records, cardinality, etc to find out the <br>best optimal plan on the fly.
+* **Cost based rules** : As opposed to rules based, what better you can do is determine the cost of each plan depending on various factors like data distribution of your records, cardinality, etc to find out the best optimal plan on the fly.
 
 ## Query Plan architecture
 

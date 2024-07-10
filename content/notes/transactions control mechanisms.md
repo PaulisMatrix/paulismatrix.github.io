@@ -1,7 +1,6 @@
 ---
 tags:
   - db
-  - transactions
 date: 2024-07-07
 publish: true
 description: A brief overview of transactions control mechanisms in a single node database as compared to those spanning across more than one nodes in a distributed setup.
