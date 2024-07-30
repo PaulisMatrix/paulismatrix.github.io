@@ -19,7 +19,11 @@ import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
+<<<<<<< HEAD
 import ContentFrontmatter from "./ContentFrontmatter"
+=======
+import Comments from "./Comments"
+>>>>>>> upstream/v4
 
 export {
   ArticleTitle,
@@ -43,5 +47,9 @@ export {
   RecentNotes,
   NotFound,
   Breadcrumbs,
+<<<<<<< HEAD
   ContentFrontmatter,
+=======
+  Comments,
+>>>>>>> upstream/v4
 }
