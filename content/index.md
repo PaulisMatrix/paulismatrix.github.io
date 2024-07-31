@@ -22,8 +22,10 @@ My interests lie in distributed systems and databases.
 
 ⚛︎ OSS:
   * [Contributing](https://github.com/PaulisMatrix/go-caskdb/tree/final) to this excellent project [caskdb](https://github.com/avinassh/py-caskdb/commits/master/) of building a<br> kvstore based on the [bitcask](https://riak.com/assets/bitcask-intro.pdf) paper.
+  
 
 👓 Did you read this? [Is my Toddler a Stochastic Parrot?](https://archive.is/hzBe3)
 
-Find me at 1999.yadwade@gmail.com<br>
-I'm most active on [Twitter](https://x.com/1999Yadwade).
+Contact me [at](mailto:1999.yadwade@gmail.com). I'm most active on [Twitter](https://x.com/1999Yadwade).
+
+Subscribe to my [RSS feed](https://paulismatrix.github.io/index.xml)
