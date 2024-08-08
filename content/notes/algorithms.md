@@ -58,7 +58,7 @@ My notes on different algorithms used to solve variety of problems in computer s
     
 **Tips** :
 
-* Generally a bottom up(tabulation) approach wherein you calculate the results of smaller subproblems first and then move up to the bigger ones. As opposed to recursive/memo solutions wherein you start upfront and check for base conditions to exit. 
+* Generally a bottom up(tabulation) approach is more optimal wherein you calculate the results of smaller subproblems first and then move up to the bigger ones. As opposed to recursive/memo solutions in which you start upfront and check for base conditions to exit. 
 
 * Try to figure out which variables to consider for the size of dp table. How can we store intermediate results for those particular values. 
 
@@ -67,7 +67,7 @@ Ex : In [LIS](https://leetcode.com/problems/longest-increasing-subsequence/descr
 
 * DP doesn’t always necessarily mean recursion + memoisation(to reuse the already computed results). In DP **you always optimally** pick a subproblem and build your way up. [Related discussion](https://blog.racket-lang.org/2012/08/dynamic-programming-versus-memoization.html).
 
-* For example, in Perfect Squares problem(consider n=12), using recursion, you end up picking up 3 as well, but that is not optimal since `9+1+1+1` is not the correct answer. The answer is when you pick 2 (`4+4+4` ) so you in recursion you end up doing **extra computations**. This is avoided in DP since you have already picked up the most optimal path(subproblem). In this case, it’s starts with 2.
+* For example, in Perfect Squares problem(consider n=12), using recursion, you end up picking up 3 as well, but that is not optimal since `9+1+1+1` is not the correct answer. The answer is when you pick 2 (`4+4+4` ) so you in recursion you end up doing **extra** <br>**computations**. This is avoided in DP since you have already picked up the most optimal path(subproblem). In this case, it’s starts with 2.
             
 **Reference videos** :
 * [5 Simple Steps for Solving Dynamic Programming Problems](https://youtu.be/aPQY__2H3tE?si=9xsyOGSQwT0OeFSP)
