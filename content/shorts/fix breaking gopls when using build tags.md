@@ -3,7 +3,7 @@ tags:
   - go
 publish: true
 date: 2024-08-16
-description: How to fix gopls when using build tags in go files. 
+description: How to fix breaking gopls when using build tags in go files. 
 ---
 
 So first of all, what are build tags? 
