@@ -11,7 +11,7 @@ So first of all, what are build tags?
 Build tags are basically conditional compilation mechanism provided by Go in which you can choose which files to include in the binary depending on tags specified in that file. 
 
 For example : 
-```go main.go
+```go title="main.go"
 //go:build foo
 // +build foo
 
@@ -40,11 +40,6 @@ Example from the go source :
 // The netgo build tag prefers the go resolver.
 // The netcgo build tag prefers the cgo resolver.
 ```
-
-
-
-
-
 
 One use case is for integration testing. Suppose you have multiple packages in your go project housing its own unit tests and you are prolly running them through `go test ./...`
 
