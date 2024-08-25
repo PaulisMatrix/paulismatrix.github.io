@@ -175,3 +175,8 @@ BTW, you can act as a Certificate Authority (CA) yourself and sign the locally g
 
 Check this [blogpost](https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/) on how to create your own SSL CA for local development.
 
+**Short Note** : 
+
+Since these are self signed certs(by Caddy or by yourself), it only works for non-public domains like localhost. 
+
+For public domains, you absolutely have to get it signed by a legit Certificate Authority (CA) like letsencrypt, mkcert, digicert, etc. 
