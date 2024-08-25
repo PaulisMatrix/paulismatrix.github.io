@@ -16,7 +16,7 @@ This is where Caddy helps in automatically generating the public, private key pa
 
 [Caddy docs](https://caddyserver.com/docs/automatic-https) for reference : 
 ```
-To serve non-public sites over HTTPS, Caddy generates its own certificate authority (CA) and uses it to sign certificates. 
+To serve non-public sites over HTTPS, Caddy generates its own Certificate Authority (CA) and uses it to sign certificates. 
 
 The trust chain consists of a root and intermediate certificate. 
 
@@ -31,7 +31,7 @@ So Caddy does both. It generates certs for our localhost :
 /data/caddy/certificates/local/localhost #
 ```
 
-and acts as a Centra Authority(CA) and signs these certs. You can see the root certs being stored in the above location as mentioned : 
+and acts as a Certificate Authority(CA) and signs these certs. You can see the root certs being stored in the above location as mentioned : 
 ```
 -rw-------    1 root     root           227 Aug 25 10:57 root.key
 -rw-------    1 root     root           631 Aug 25 10:57 root.crt
@@ -171,7 +171,7 @@ It looks something like this (checkout the TLS handshake part and how domain ver
 
 TADAA..!!!
 
-BTW, you can act as a Central Authority(CA) yourself and sign the locally generated certs.
+BTW, you can act as a Certificate Authority (CA) yourself and sign the locally generated certs.
 
 Check this [blogpost](https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/) on how to create your own SSL CA for local development.
 
