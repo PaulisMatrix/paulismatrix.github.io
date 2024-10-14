@@ -26,11 +26,11 @@ If you want Caddy to forward the request to the next server available then you c
     }
 }
 ```
-Caddy will basically forward the request to the next available server if available and so on..
+Caddy will basically forward the request to the next available server and so on...
 
 Checkout more load balancing options [here](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy#syntax)
 
-You can also swap in a new backend with [dynamic upstreams](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy#dynamic-upstreams), to which Caddy will route held up as well as the new incoming requests. 
+You can also swap in a new backend with [dynamic upstreams](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy#dynamic-upstreams), to which Caddy will route the held up as well as the new incoming requests. 
 
 More discussed in [this github issue](https://github.com/caddyserver/caddy/issues/4442)
 
