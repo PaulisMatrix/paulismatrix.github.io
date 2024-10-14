@@ -2,15 +2,10 @@
 
 .search {
   min-width: fit-content;
-<<<<<<< HEAD
-  max-width: 9rem;
-  flex-grow: 0.2;
-=======
   max-width: 14rem;
   @media all and ($mobile) {
     flex-grow: 0.3;
   }
->>>>>>> upstream/v4
 
   & > .search-button {
     background-color: var(--lightgray);
