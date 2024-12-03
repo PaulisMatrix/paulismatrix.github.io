@@ -11,6 +11,7 @@ const config: QuartzConfig = {
     baseUrl: "https://paulismatrix.github.io/",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
+    generateSocialImages: false,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
