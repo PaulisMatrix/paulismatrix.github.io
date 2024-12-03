@@ -45,11 +45,6 @@ const defaultOptions: SocialImageOptions = {
 }
 
 export default (() => {
-<<<<<<< HEAD
-  const Head: QuartzComponent = ({ cfg, fileData, externalResources }: QuartzComponentProps) => {
-    const title = fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
-    const description = fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description
-=======
   let fontsPromise: Promise<SatoriOptions["fonts"]>
 
   let fullOptions: SocialImageOptions
@@ -120,7 +115,6 @@ export default (() => {
       }
     }
 
->>>>>>> upstream/v4
     const { css, js } = externalResources
 
     const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
