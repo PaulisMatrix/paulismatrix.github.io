@@ -4,7 +4,7 @@ date: 2024-07-06
 description: my personal blog about distributed systems, databases and random ramblings.
 publish: true
 ---
-🐸 I'm a software engineer working at [RavenMail](https://ravenmail.io/) on the most advanced email security suite.<br>
+🐸 I'm a software engineer working at [Gojek/Goto](https://www.gojek.io/) in the Data Science Platform and Engineering team.<br>
 My interests lie in distributed systems and databases. 
 
 🔎 Jump to:
