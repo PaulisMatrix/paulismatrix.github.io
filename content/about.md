@@ -13,3 +13,7 @@ Currently brainstorming on developing GoTo's AI-based fintect voice assistant na
 
 
 My interests(in no particular order) lie in distributed systems, databases, infra, mythology, sci-fi, world history - ([goodreads](https://www.goodreads.com/user/show/149694972-rushikesh)) and now GPUs ^ ^ 
+
+
+Hie, Yup, that's me fixing tests!!(IKR) 
+<img src="./images/me.jpeg" width=50% height=50%>
