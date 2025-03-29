@@ -14,8 +14,8 @@ publish: true
   [👨‍💻 OSS](./oss.md)
 
 🔎 More:
-  * [Notes](./notes/) - Notes and Learnings about my field of interests.
-  * [Shorts](./shorts/) - Short notes, TLDRs, TILs, etc.
+  * [Notes](./notes/) - Written references to reinforce my understanding in my field of interests.
+  * [Shorts](./shorts/) - TILs, TLDRs, etc.
   * [PIL](./papers/) - Papers I love, read and reviewed.
   * Find by [Tags](https://paulismatrix.github.io/tags/)
 
