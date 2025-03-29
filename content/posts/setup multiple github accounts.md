@@ -2,7 +2,7 @@
 tags:
   - git
 publish: true
-date: 2024-07-20
+date: 2024-08-20
 description: how to maintain multiple github accounts on the same machine.
 ---
 

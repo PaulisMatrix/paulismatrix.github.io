@@ -2,7 +2,7 @@
 tags:
   - go
 publish: true
-date: 2024-07-08
+date: 2024-08-01
 description: A simple example of connections or requests pooling in golang.
 ---
 

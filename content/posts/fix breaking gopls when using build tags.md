@@ -2,7 +2,7 @@
 tags:
   - go
 publish: true
-date: 2024-08-16
+date: 2024-09-10
 description: How to fix breaking gopls when using build tags in go files. 
 ---
 

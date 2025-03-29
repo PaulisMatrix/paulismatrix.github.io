@@ -2,7 +2,7 @@
 tags:
   - infra
 publish: true
-date: 2024-08-31
+date: 2024-09-02
 description: Pause incoming traffic and polling the server with Caddy.
 ---
 

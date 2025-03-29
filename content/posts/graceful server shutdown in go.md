@@ -2,7 +2,7 @@
 tags:
   - go
 publish: true
-date: 2024-010-08
+date: 2024-10-08
 description: how to perform graceful shutdown of a server in golang.
 ---
 
