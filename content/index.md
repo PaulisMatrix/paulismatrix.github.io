@@ -17,14 +17,8 @@ publish: true
   Hiee, Yup, that's me fixing tests!!(IKR) 
   <img src="./images/me.jpeg" width=50% height=50%>
 
-  <span style="margin-right: 60px;">[🤓 Blog](./posts/)</span><span style="margin-right: 60px;">[🔭 Projects](./projects.md)</span><span>[👨‍💻 OSS](./oss.md)</span>
 
-🔎 More:
-  * [Notes](./notes/) - My notes on different tech topics.
-  * [Shorts](./shorts/) - TILs, TLDRs, etc.
-  * [PIL](./papers/) - Papers I love, read and reviewed.
-  * Find by [Tags](https://paulismatrix.github.io/tags/)
-
+🔎 Search by [Tags](https://paulismatrix.github.io/tags/)
   
 👓 Did you read this? [Is my Toddler a Stochastic Parrot?](https://archive.is/hzBe3)
 

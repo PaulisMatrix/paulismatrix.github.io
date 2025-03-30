@@ -26,6 +26,7 @@ time.Time
 So for user or driver defined types such as `sql.NullString`, `pq.StringArray`, we need to implement the `ValueConverter` interface. [Source here.](https://cs.opensource.google/go/go/+/refs/tags/go1.24.1:src/database/sql/driver/types.go;l=30)
 
 The workaround for the above issue is to pass our own Custom Converter to the sqlmock which handles all the data types.
+[More discussion here.](https://github.com/DATA-DOG/go-sqlmock/issues/175#issuecomment-500801483)
 
 ```go title="converter.go"
 type CustomConverter struct{}

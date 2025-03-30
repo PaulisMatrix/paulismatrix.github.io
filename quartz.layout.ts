@@ -32,6 +32,26 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
+    Component.Explorer(
+      {
+        title:"Explorer",
+        folderClickBehavior: "link",
+        folderDefaultState: "collapsed",
+        useSavedState: false,
+        mapFn: (node) => {
+          if (node.displayName.toLowerCase() == "my posts"){
+              node.displayName = "Blog"
+          }else if(node.displayName.toLowerCase() == "my notes"){
+              node.displayName = "Notes"
+          }
+        },
+        filterFn: (node) => {
+          const omit = new Set(["oss", "tags", "hosting","projects"])
+          return !omit.has(node.displayName.toLowerCase())
+        },
+        order: ["filter", "map", "sort"],
+      }
+    ),
   ],
   right: [],
   /*
