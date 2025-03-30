@@ -17,7 +17,7 @@ publish: true
   Hiee, Yup, that's me fixing tests!!(IKR) 
   <img src="./images/me.jpeg" width=50% height=50%>
 
-  <span style="margin-right: 70px;">[🤓 Blog](./posts/)</span><span style="margin-right: 70px;">[🔭 Projects](./projects.md)</span><span>[👨‍💻 OSS](./oss.md)</span>
+  <span style="margin-right: 60px;">[🤓 Blog](./posts/)</span><span style="margin-right: 60px;">[🔭 Projects](./projects.md)</span><span>[👨‍💻 OSS](./oss.md)</span>
 
 🔎 More:
   * [Notes](./notes/) - My notes on different tech topics.
