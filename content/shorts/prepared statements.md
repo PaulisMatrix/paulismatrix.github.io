@@ -9,9 +9,11 @@ description: database prepared statements.
 Prepared statements are parsed, compiled and optimized once, when you register at the start. 
 Sometimes the db caches the query plan as well. 
 
-This is huge boost in performance if you are executing the same query multiple times with different parameters in the same session as compared to executing ad-hoc queries multiple times.
+This is huge boost in performance if you are executing the same query multiple times with different 
+parameters in the same session as compared to executing ad-hoc queries multiple times.
 
-But in most of the databases, prepared statements are session/connection scoped; which means they are valid as long as the same connection is being used to execute the statements. They are not **globally stored**. 
+But in most of the databases, prepared statements are session/connection scoped; which means they are valid as long as the current connection is active and is being used to execute the statement queries.
+They are not **globally stored**. 
 
 This doesn't fit well with the traditional server setup wherein you generally maintain a pool of connections so you need to track these statements.
 
