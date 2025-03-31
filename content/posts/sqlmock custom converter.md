@@ -70,5 +70,4 @@ func GetMockDB() (*sql.DB, sqlmock.Sqlmock, error) {
 
 ```
 
-This will hopefully pass all your test cases and you can have a sound sleep. 
-
+This will hopefully pass all your test cases and you sleep soundly.

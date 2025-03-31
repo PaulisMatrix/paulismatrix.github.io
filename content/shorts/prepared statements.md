@@ -17,7 +17,7 @@ This doesn't fit well with the traditional server setup wherein you generally ma
 
 Also each statement allocates some memory on the database server. So make sure to explicitly call `DEALLOCATE` or `CLOSE` at the end to cleanup.
 
-Here's how prepared statements are executed (PG protocol but most dbs follow the same steps):
+Here's how prepared statements are executed at the wire level (PG protocol but most dbs follow the same steps):
 
 ```
 Parse (statement_name="my_statement", query="SELECT * FROM users WHERE id = $1", param_types=[int])
@@ -38,3 +38,5 @@ EXECUTE my_statement (1);
 
 DEALLOCATE my_statement;
 ```
+
+[Prepared stmt example in go using sqlx.](https://jmoiron.github.io/sqlx/)
