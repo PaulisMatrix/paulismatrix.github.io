@@ -9,7 +9,7 @@ description: Pause incoming traffic and polling the server with Caddy.
 You can pause incoming reqs, when your backend is down with Caddy's `lb_try_duration` 
 and do retries with interval with `lb_try_interval` policy. 
 
-Ref : https://til.simonwillison.net/caddy/pause-retry-traffic
+[Ref from](https://til.simonwillison.net/caddy/pause-retry-traffic) simon willison's blog.  
 
 
 If you want Caddy to forward the request to the next server available then you can specify a list of available upstreams/servers beforehand in the Caddyfile with `lb_policy` set to first. Something like this : 
