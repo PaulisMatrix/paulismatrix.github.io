@@ -1,5 +1,5 @@
 ---
-title: namaskar
+title: hallo
 date: 2024-07-06
 description: my personal blog about distributed systems, databases and random ramblings.
 publish: true
