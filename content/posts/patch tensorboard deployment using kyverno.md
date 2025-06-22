@@ -6,7 +6,7 @@ date: 2025-06-22
 description: Patch tensorboard deployment requests to inject resource quotas using kyverno.
 ---
 
-The tensorboard controller doesn't provide a way to configure resource quotas for tensorboard deployments. So if you have resourcequotas setup for your cluster, then tensorboard deployments will fail with the below error : 
+The [tensorboard controller](https://github.com/kubeflow/kubeflow/blob/master/components/tensorboard-controller/README.md) doesn't provide a way to configure resource quotas for tensorboard deployments. So if you have resourcequotas setup for your cluster, then tensorboard deployments will fail with the below error : 
 ```
 4m56s       Warning   FailedCreate            replicaset/sample-v0214-55f5485c5b     
 
