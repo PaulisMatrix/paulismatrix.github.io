@@ -14,6 +14,40 @@ Error creating: pods "sample-v0214-55f5485c5b-mb2lz" is forbidden: failed quota:
 ```
 One workaround is to dynamically patch the deployment requests received by the kube-api server using an [admission controller](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers).
 
+Quick overview of an admission controller phases : 
+```mermaid
+sequenceDiagram
+    participant User
+    participant APIServer as Kubernetes API Server
+    participant Auth as Authentication + Authorization
+    participant Mutate as Mutating Webhook(s)
+    participant ValidatePolicies as Validating Admission Policies
+    participant ValidateWebhooks as Validating Webhook(s)
+
+    User->>APIServer: Request (e.g., create a pod)
+    APIServer->>Auth: Authenticate and authorize
+    Auth-->>APIServer: Result
+
+    loop For each mutating webhook
+        APIServer->>Mutate: Invoke webhook
+        Mutate-->>APIServer: Modify or reject object
+    end
+
+    loop For each validating policy
+        APIServer->>ValidatePolicies: Invoke policy
+        ValidatePolicies-->>APIServer: Reject if needed
+    end
+
+    par All validating webhooks
+        APIServer->>ValidateWebhooks: Invoke webhook
+        ValidateWebhooks-->>APIServer: Reject if needed
+    end
+
+    APIServer-->>User: Response (success or error)
+
+```
+
+
 We can use a policy engine named [kyverno](https://kyverno.io/docs/applying-policies/#in-clusters) which basically runs as a dynamic admission controller. 
 It receives validating and  mutating admission webhook HTTP callbacks from kube api server and applies the matching policies to return the results that enforce admission policies or reject requests before those are registered with the cluster.
 
