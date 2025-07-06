@@ -101,7 +101,7 @@ If you see such similar logs :
 INF github.com/kyverno/kyverno/pkg/auth/auth.go:83 > 
 disallowed operation evaluationError= gvr="tensorboard.kubeflow.org/v1alpha1, Resource=tensorboards" kind=Tensorboard logger=auth namespace= reason= v=0 verb=get
 ```
-then it means the request is blocked due to lack of permission and we need to update the kyverno clusterole : 
+then it means the request is blocked due to lack of rbac permission and we need to update the kyverno clusterole : 
 ```yaml
 kubectl patch clusterrole kyverno:admission-controller:core --type=json -p='[
   {
@@ -115,5 +115,31 @@ kubectl patch clusterrole kyverno:admission-controller:core --type=json -p='[
   }
 ]'
 ```
+We need to update if not already, the kyverno mutating webhook configuration as well to reflect the 
+tensorboard deployments. 
+So basically : 
+| Component                             | What it is                      | Purpose                                                                                                                    |
+| ------------------------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `kyverno:admission-controller:core`   | **RBAC (ClusterRole)**       | Grants Kyverno **access to Kubernetes resources** (e.g. Pods, ConfigMaps) so it can evaluate/mutate them.                  |
+| `kyverno-policy-mutating-webhook-cfg` | **Admission webhook config** | Registers Kyverno as an **admission controller** with the Kubernetes API server, so it can intercept and process requests. |
+
+```yaml
+kubectl patch mutatingwebhookconfiguration kyverno-resource-mutating-webhook-cfg \
+  --type='json' \
+  -p='[
+    {
+      "op": "add",
+      "path": "/webhooks/0/rules/-",
+      "value": {
+        "apiGroups": ["tensorboard.kubeflow.org"],
+        "apiVersions": ["v1alpha1"],
+        "operations": ["CREATE", "UPDATE"],
+        "resources": ["tensorboards"],
+        "scope": "Namespaced"
+      }
+    }
+  ]'
+```
+
 and then restart the admission controller deployment.
 Describe the tensorboard pod to check whether you see the resource requests/limits or not.
