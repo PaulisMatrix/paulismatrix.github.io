@@ -41,4 +41,4 @@ EXECUTE my_statement (1);
 DEALLOCATE my_statement;
 ```
 
-[Prepared stmt example in go using sqlx.](https://jmoiron.github.io/sqlx/)
+[Prepared stmt example in go using sqlx.](https://jmoiron.github.io/sqlx/#preparedStmts)
