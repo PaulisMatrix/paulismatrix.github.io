@@ -16,7 +16,7 @@ The imposter syndrome is still there. Don’t think it ever leaves and I think t
 
 I took my first and one of many international trips this year as well. Finally went out of my comfort zone, met a lot of interesting folks along the way, and made some awesome memories with them.
 
-From giving a organization wide tech talk, crashing motionless on the bed after coming home from work, doing shrooms on a random island in Bali, and playing volleyball for straight two hours, to falling into a pool at a brewery, puking off from a moving bike, attending concerts and gigs, and the evergreen late night chais at the usual hangout spot, I found a new motivation to continue and felt like it was worth grinding a few years back and still I'm, it never stops, I don't want to. 
+From giving a organization wide tech talk, crashing motionless on the bed after coming home from work, doing shrooms on a random island in Bali, and playing volleyball for straight two hours, to falling into a pool at a brewery, surfing at Mulki, attending concerts and gigs, and the evergreen late night chais at the usual hangout spot, I found a new motivation to continue and felt like it was worth grinding a few years back and still I'm, it never stops, I don't want to. 
 
 I was initially planning on going for a masters, but things worked out just fine in the end, I think. I’m excited to see what’s next for me. I have a couple of things planned for next year. Need something to look forward to; otherwise, you’re just existing day in and day out, and what’s the fun in that? I want to have a story to tell. So yeah, let’s see how that pans out.
 
